@@ -16,7 +16,7 @@ const Md2PosterContent = ({
   children, className, markdownProps,
   articleClassName = 'prose prose-gray prose-img:rounded-lg prose-img:border prose-img:opacity-100'
 }: Md2PosterContentProps) => {
-  const wrapClassName = 'flex flex-col bg-white px-4 sm:px-8 py-8 rounded-2xl border shadow-2xl shadow-gray-950/50'
+  const wrapClassName = 'flex flex-col bg-white/95 px-4 sm:px-8 py-8 rounded-2xl border shadow-2xl shadow-gray-950/50'
   if (typeof children === 'string' && typeof window !== 'undefined') {
     return (
       <div className={cn(wrapClassName, className)}>

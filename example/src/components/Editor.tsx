@@ -2,7 +2,7 @@
 import React, { useState, ChangeEvent, TextareaHTMLAttributes, useRef } from 'react'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Button } from './ui/button'
-import { Md2PosterContent, Md2Poster, Md2PosterHeader, Md2PosterFooter } from 'markdown-to-poster'
+import { Md2PosterContent, Md2Poster, Md2PosterHeader, Md2PosterFooter } from 'markdown-to-image'
 import { Copy, LoaderCircle } from 'lucide-react';
 
 
@@ -60,14 +60,14 @@ export default function Editor() {
         <div className="w-1/2 mx-auto flex justify-center p-4 ">
           {/* Preview */}
           <div className="flex flex-col w-fit">
-            <Md2Poster theme="SpringGradientWave" copySuccessCallback={copySuccessCallback} ref={markdownRef}>
+            <Md2Poster theme="blue" copySuccessCallback={copySuccessCallback} ref={markdownRef}>
               <Md2PosterHeader className="flex justify-center items-center px-4 font-medium text-lg">
                 <span>{new Date().toISOString().slice(0, 10)}</span>
               </Md2PosterHeader>
               <Md2PosterContent>{mdString}</Md2PosterContent>
               <Md2PosterFooter className='text-center'>
                 <img src="/logo.png" alt="logo" className='inline-block mr-2 w-5' />
-                Powered by ReadPo.com
+                Powered by mtp.lxzh.app
               </Md2PosterFooter>
             </Md2Poster>
           </div>
